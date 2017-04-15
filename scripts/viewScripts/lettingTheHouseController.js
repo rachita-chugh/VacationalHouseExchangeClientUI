@@ -3,14 +3,18 @@ vacationHouseExchangeApp.controller('lettingTheHouseController', ['$scope','$roo
 var dataForRequest={};
 
 	$scope.letHouse=function(){
-		//var data={};
+		dataForRequest['loggedInEmail'] = loggedInUser;
 		$( ".formId" ).each(function( index ) {
 			dataForRequest[$( this ).attr('for')] = $( this ).next().find('.formValue').val();
 		});
 		console.log("Form data for request:"+ dataForRequest);
 		
-		vacationHouseExchangeAppService.callVHEServer("",dataForRequest, function(result){
-			bootbox.alert("success!");
+		vacationHouseExchangeAppService.callVHEServer("lettinghouseendpoints/lettingHouse",dataForRequest, function(result){
+			if(result['statusCode'] == 0){
+				$location.path("viewHouses");
+			}else{
+				bootbox.alert(result['error_message']);
+			}
 				
 
 			},function(error){
@@ -21,7 +25,9 @@ var dataForRequest={};
 	$scope.viewHouses = function(){
 		$location.path("viewHouses");
 	}
-	
+	$scope.editProfile = function(){
+		$location.path("editDetails");
+	}
 
 
 }]);

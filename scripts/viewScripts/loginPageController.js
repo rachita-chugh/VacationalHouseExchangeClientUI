@@ -15,7 +15,7 @@ vacationHouseExchangeApp.controller('loginPageController', ['$scope','$rootScope
 				"emailId": result	
 			}
 			vacationHouseExchangeAppService.callVHEServer("forgotPassword",data, function(result){
-				if(result['STATUS_CODE'] == 0){
+				if(result['statusCode'] == 0){
 					bootbox.alert(result['RESPONSE_STATUS']);
 					
 					
@@ -46,19 +46,37 @@ vacationHouseExchangeApp.controller('loginPageController', ['$scope','$rootScope
 	***/
 	
 	$scope.login=function(){
-		$location.path("viewHouses");
-		/*var data={
-				"username": $("#username").val(),
-				"password" : $("#password").val()
-			}
+	//	$location.path("viewHouses");
+		var success=false;
+		if($("#emailId").val() == null || $("#emailId").val() == "" || $("#emailId").hasClass('error')){
+			bootbox.alert("Please enter valid Email-id");
+			return;
+		}
+		if($("#password").val() == null || $("#password").val() == ""){
+			bootbox.alert("Please enter password");
+			return;
+		}
+		var encryptedPassWord = NGCommonUtilities.encryptData($("#password").val());
+		var data={
+				"emailId": $("#emailId").val(),
+				"password" : encryptedPassWord
+		}
 		vacationHouseExchangeAppService.callVHEServer("userendpoints/login",data, function(result){
-			bootbox.alert("You are logged in!");
-			$location.path("viewHouses");
+			if(result['statusCode'] == 0){
+				if(loggedInUser == ""){
+					loggedInUser= $("#emailId").val();
+				}
 				
-
+				//success=true;
+				$location.path("viewHouses");
+				$scope.$apply();
+			}else{
+				bootbox.alert("There was some error logging in. Please try again!")
+			}
 			},function(error){
 				bootbox.alert("Could not connect to server!");
-			});*/
+			});
+			
 	};
 
 

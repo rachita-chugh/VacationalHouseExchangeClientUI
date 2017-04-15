@@ -1,8 +1,8 @@
 'use strict';
 
-var VHEServer="http://192.168.1.109:8081/VacationalHouseExchange/vhe/";
-
-
+//var VHEServer="http://172.20.10.6:8081/VacationalHouseExchange/vhe/";
+var VHEServer = "http://vacationalhouseexchangewsenv.9nsft9whya.ap-southeast-2.elasticbeanstalk.com/vhe/";
+var loggedInUser="";
 
 var vacationHouseExchangeApp = angular.module("vacationHouseExchangeApp", ['ngRoute']);
 
@@ -33,6 +33,10 @@ vacationHouseExchangeApp.config(function ($routeProvider) {
 										{
 											templateUrl: 'partials/lettingTheHouse.html',
 											controller: 'lettingTheHouseController'
+									}).when('/editDetails',
+										{
+											templateUrl: 'partials/editDetails.html',
+											controller: 'editDetailsController'
 									}).otherwise({
 										redirectTo: 'login_page.html'
 										});
@@ -44,7 +48,12 @@ vacationHouseExchangeApp.factory('vacationHouseExchangeAppService', ['$http', '$
 
 	var callVHEServer = function (url, data, success_callback, fail_callback) {
 		url = VHEServer  + url;
-		var objjson=JSON.stringify(data);
+		if (data == null){
+			data = "";
+		}else{
+			var objjson=JSON.stringify(data);
+		}
+		
 		console.log('url',url)
 		console.log('Request Data',data);
 		$.ajax({
