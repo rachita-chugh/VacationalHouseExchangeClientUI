@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Vacation House Exchange</title>
+
+<!--Global Scripts-->
+<script src="scripts/global/vhe-form-validation.js"></script>
+<script src="scripts/global/vhe-utilities.js"></script>
+
+<!--Vendor Scripts-->
+<script src="scripts/vendors/angular/angular.min.js"></script>
+<script src="scripts/vendors/angular/angular-route.min.js"></script>
+<script src="scripts/vendors/jQuery/jquery.js"></script>
+<script src="scripts/vendors/jQuery/jquery.validate.min.js"></script>
+<script src="scripts/vendors/jQuery/jquery-ui.min.js"></script>
+<script src="scripts/vendors/bootstrap/bootstrap.js"></script>
+<script src="scripts/vendors/bootstrap/bootbox.min.js"></script>
+<script src="scripts/vendors/generic/swiper.min.js"></script>
+<script src="scripts/vendors/generic/nprogress.js"></script>
+<script src="scripts/vendors/generic/spin.min.js"></script>
+<script src="scripts/vendors/generic/moment.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/vendors/cryptojs/rollups/sha256.js"></script>
+
+<!--Custom Scripts-->
+<script src="scripts/viewScripts/indexController.js"></script>
+<script src="scripts/viewScripts/loginPageController.js"></script>
+<script src="scripts/viewScripts/menuController.js"></script>
+<script src="scripts/viewScripts/registrationPageController.js"></script>
+<script src="scripts/viewScripts/viewHousesController.js"></script>
+<script src="scripts/viewScripts/lettingTheHouseController.js"></script>
+<script src="scripts/viewScripts/editDetailsController.js"></script>
+<script src="scripts/viewScripts/homeController.js"></script>
+
+<!--css-->
+<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+<link rel="stylesheet" href="css/bootstrap/bootstrap-theme.min.css">
+<link rel="stylesheet" href="css/fonts/font-awesome.min.css">
+<link rel="stylesheet" href="css/fonts/fontawesome-webfont.woff2">
+<link rel="stylesheet" href="css/fonts/glyphicons-halflings-regular.ttf">
+<link rel="stylesheet" href="css/fonts/glyphicons-halflings-regular.woff2">
+<link rel="stylesheet" href="css/fonts/glyphicons-halflings-regular.woff">
+<link rel="stylesheet" href="css/jQuery/jquery-ui.theme.min.css">
+<link rel="stylesheet" href="css/jQuery/jquery-ui.css">
+<link rel="stylesheet" href="css/generic/swiper.min.css">
+<link rel="stylesheet" href="css/generic/nprogress.css">
+
+<!--Custom css-->
+<link rel="stylesheet" href="css/viewStyle/loginPage.css">
+<link rel="stylesheet" href="css/viewStyle/style.css">
+<link rel="stylesheet" href="css/viewStyle/animate.css">
+<link rel="stylesheet" href="css/viewStyle/magnific-popup.css">
+<link rel="stylesheet" href="css/viewStyle/form-elements.css">
+<link rel="stylesheet" href="css/viewStyle/media-queries.css">
+<link rel="stylesheet" href="css/fonts/elegant-font/code/style.css">
+<link rel="stylesheet"
+	href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400">
+<link rel="stylesheet"
+	href="http://fonts.googleapis.com/css?family=Montserrat:700,400">
+
+<noscript>Kindly enable Javascript from your browser settings
+	to run this application.</noscript>
+</head>
+<body ng-app="vacationHouseExchangeApp" ng-controller="indexController"
+	style="overflow: scroll">
+	<!-- Top menu -->
+	<nav class="navbar" role="navigation">
+		<div class="container">
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="top-navbar-1">
+				<ul class="nav navbar-nav">
+					<li class = "menuClass" id="home"><a><span
+							aria-hidden="true" class="icon_house"></span><br>Home</a></li>
+					<li class = "menuClass" id="login"><a><span aria-hidden="true"
+							class="icon_camera"></span><br>Login</a></li>
+					<li class = "menuClass" id="register"><a><span aria-hidden="true"
+							class="icon_comment"></span><br>Register</a></li>
+					<li class = "menuClass" id="viewHouses"><a><span aria-hidden="true"
+							class="icon_tools"></span><br>View Houses</a></li>
+					<li class = "menuClass" id="home2"><a><span aria-hidden="true"
+							class="icon_profile"></span><br>Account</a></li>
+					<li class = "menuClass" id="logout" style="display: none;"><a><span aria-hidden="true"
+							class="icon_mail"></span><br>Logout</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div ng-view></div>
+
+	<!-- Footer -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 footer-box wow fadeInUp">
+					<h4>About Us</h4>
+					<div class="footer-box-text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+							sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor
+							sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+							incididunt ut labore et.</p>
+						<p>
+							<a href="about.html">Read more...</a>
+						</p>
+					</div>
+				</div>
+				<div class="col-sm-4 footer-box wow fadeInDown">
+					<h4>Email Updates</h4>
+					<div class="footer-box-text footer-box-text-subscribe">
+						<p>Enter your email and you'll be one of the first to get new
+							updates:</p>
+						<form role="form" action="assets/subscribe.php" method="post">
+							<div class="form-group">
+								<label class="sr-only" for="subscribe-email">Email
+									address</label> <input type="text" name="email" placeholder="Email..."
+									class="subscribe-email form-control" id="subscribe-email">
+							</div>
+							<button type="submit" class="btn">Subscribe</button>
+						</form>
+						<p class="success-message"></p>
+						<p class="error-message"></p>
+					</div>
+				</div>
+				<div class="col-sm-4 footer-box wow fadeInDown">
+					<h4>Contact Us</h4>
+					<div class="footer-box-text footer-box-text-contact">
+						<p>
+							<span aria-hidden="true" class="icon_pin"></span> Address: Via
+							Principe Amedeo 9, 10100, Torino, TO, Italy
+						</p>
+						<p>
+							<span aria-hidden="true" class="icon_phone"></span> Phone: 0039
+							333 12 68 347
+						</p>
+						<p>
+							<span aria-hidden="true" class="icon_profile"></span> Skype:
+							Gioia_Business
+						</p>
+						<p>
+							<span aria-hidden="true" class="icon_mail"></span> Email: <a
+								href="#">contact@gioia.com</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12 wow fadeIn">
+					<div class="footer-border"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-7 footer-copyright wow fadeIn">
+					<p>
+						&copy; Gioia - All rights reserved. Template by <a
+							href="http://azmind.com">Azmind</a>.
+					</p>
+				</div>
+				<div class="col-sm-5 footer-social wow fadeIn">
+					<a href="#"><span class="social_facebook"></span></a> <a href="#"><span
+						class="social_dribbble"></span></a> <a href="#"><span
+						class="social_twitter"></span></a> <a href="#"><span
+						class="social_pinterest"></span></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+
+<script>
+
+</script>
+
+</html>

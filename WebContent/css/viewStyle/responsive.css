@@ -1,0 +1,204 @@
+
+@media screen and (max-width: 1024px) {
+.preview_area .page p { padding: 27% 0 }
+.folder-list > li .pull-left.active { margin-left: -5.3% }
+.tab_area .tab_section .field_container .date_section .col_from { width: 18%; }
+.search_area .search_top .search_right { width: 95% }
+.header-heading { width: 70% }
+}
+
+@media screen and (max-width: 800px) {
+}
+
+@media screen and (max-width: 768px) {
+.preview_area .page p { padding: 54% 0 }
+.folder-list > li .pull-left.active { margin-left: -7.2% }
+.tab_area .tab_section .field_container .date_section .col_from { width: 28%; }
+.tab_area > .tab_section ul li a.active { font-size: 23px }
+.select_input_combo { padding-left: 0; padding-right: 0 }
+.tab_area .tab_section .field_container .select_input_combo .col-xs-1 { width: 0; padding: 0 5px }
+.tab_area .tab_section .field_container .select_input_combo label, .tab_area .tab_section .field_container .select_input_combo select { font-size: 16px }
+.tab_area .tab_section .field_container .select_input_combo .select_row { padding-top: 12px; padding-bottom: 12px }
+.tab_area .tab_section .field_container .select_row .caret { right: 3px; top: 18px; }
+.tab_area .tab_section .field_container .select_input_combo .col-xs-2 { width: 19.667%; }
+.date_section .col-xs-1 { width: 10.333%; }
+}
+
+@media (max-width: 610px) {
+.swiper_login { max-width: 600px; }
+.saved_search_criteria .saved_search_criteria_content ul li span { width: 200px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+}
+
+@media (max-width: 480px) {
+	.search_area_myqueue{ margin-top:38px;}
+#page-container-view h3 { font-size: 15px }
+.login-form { width: 270px; }
+.login-container { width: 350px; }
+.search_area .search_top .search_right { width: 90% }
+.swiper_login { max-width: 480px; }
+.swiper_login .swiper-pagination-white .swiper-pagination-bullet { width: 11px; height: 11px }
+.swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet { margin: 0 8px !important }
+.folder-icon, .pdf-icon, .tiff-icon, .jpg-icon, .png-icon, .gif-icon, .doc-icon, .bmp-icon, .blank-icon { background: url("../images/repository/folder-icon-small.png") no-repeat scroll center center / 100% 100% rgba(0, 0, 0, 0) }
+.folder-icon { width: 28px; height: 24px }
+.menu-icon { background: url("../images/menu-icon-small.png"); width: 16px; height: 15px }
+.menu-icon.active { /*  background-image: url("../images/menu-active-icon-small.png");*/ }
+.preview-search-icon { background-image: url("../images/preview-search-icon-small.png"); width: 21px; height: 21px; right: 69px; top: 6px }
+.filter-icon { background-image: url("../images/repository/filter-icon-small.png"); width: 21px; height: 22px; margin-right: 2px }
+.setting-icon { height: 27px; width: 25px;/* background-image: url("../images/setting-icon-small.png");
+        padding: 0 10px;
+        width: 4px;*/ }
+.dropdown.open .setting-icon { /*  background-image: url("../images/setting-active-icon-small.png");*/ }
+.pdf-icon { background-image: url("../images/repository/pdf-small.png"); width: 24px; height: 32px }
+.tiff-icon { background-image: url("../images/repository/tiff-small.png"); width: 25px; height: 32px }
+.jpg-icon { background-image: url("../images/repository/jpg-small.png"); width: 25px; height: 31px }
+.png-icon { background-image: url("../images/repository/png-small.png"); width: 25px; height: 32px }
+.header-heading { font-size: 16px }
+.folder-list > li .pull-left { font-size: 14px }
+.folder-list > li .pull-left .right_content_area .inner_content_area { font-size: 12px }
+header { height: 38px }
+.header-heading { line-height: 34px; padding-left: 40px }
+.header-left { left: 10px; top: 10px }
+aside { top: 36px }
+.header-right { top: 6px }
+.pull-right { top: -10px; right: 0 }
+.pull-right .swipe li a { font-size: 14px; line-height: 45px }
+.pull-right-new .swipe li a {  line-height: 38px }
+.folder-list > li.inside_slide .pull-right { right: -225px; }
+.folder-list > li.inside_slide .pull-right .swipe li a { line-height: 56px }
+.back-icon { background: url("../images/arrback-icon-small.png") no-repeat 0 0; width: 8px; height: 12px }
+.more_folder ul li { font-size: 14px; min-height: 68px; }
+.more_folder ul li img { width: 32px }
+.addfolder-input input, .modal-new input.btn-edit[type="button"], button.btn-edit, .delete-window input.btn-delete[type="button"], button.btn-delete, .edit-window input.btn-edit[type="button"], button.btn-edit { font-size: 14px; margin: 0 }
+.edit-window .editfolder-input input { font-size: 14px; }
+#modal-popup-view .modal-dialog { width: 400px }
+.modal-header { font-size: 14px }
+#modal-popup-view .modal-text label { font-size: 14px }
+#modal-popup-view .modal-text p, .modal-property .input_cancel .btn { font-size: 14px }
+.setting-menu li a { font-size: 14px; background: url("../images/help-small.png") no-repeat 10px center; line-height: 22px; padding: 5px 5px 5px 34px; }
+aside li a { font-size: 14px; line-height: 22px; padding: 5px 5px 5px 39px; }
+.setting-menu li a.logout-icon { background-image: url("../images/logout-small.png"); }
+.dropdown-menu { min-width: 92px; padding: 0 }
+.setting-menu { right: -8px !important; }
+.search_area span a { font-size: 14px }
+.filter-list li a { font-size: 14px }
+aside { width: 147px }
+aside li a.Repository-icon { background: url("../images/Repository-icon-small.png") no-repeat scroll 8px center; }
+aside li a.Search-icon { background: url("../images/search_icon-small.png") no-repeat scroll 8px center; }
+aside li a.favourite-icon { background: url("../images/favourite-icon-small.png") no-repeat scroll 8px center; }
+aside li a { background: url("../images/activities-icon-small.png") no-repeat scroll 8px center; }
+.add-icon { width: 50px; height: 56px; background: url("../images/add-icon.png") no-repeat scroll 24px 24px / 30% 30% #3c5a9a; border-radius: 55px 0 0; }
+.wheel-button, .wheel-button:visited { width: 50px; height: 56px; border-radius: 55px 0 0; }
+.wheel-button i { margin: 8px; font-weight: normal; font-size: 30px }
+.uploaddoc-icon, .addfolder-icon { background: url("../images/repository/upload-doc-small.png") no-repeat scroll center center rgba(0, 0, 0, 0); }
+.addfolder-icon { background-image: url("../images/repository/add-folder-small.png"); margin-top: 72px !important; }
+#rightdown-menu-view ul { bottom: 7px; right: 9px; }
+#rightdown-menu-view ul li a, #rightdown-menu-view ul li a:visited, #rightdown-menu-view ul li a:hover { width: 65px; height: 65px }
+#rightdown-menu-view ul li a i { width: 65px; height: 65px }
+.upload_container ul li strong { font-size: 14px }
+.upload_container ul li img { width: 43%; }
+.upload_container ul { padding: 24PX 0 10px 0 }
+.search_area .search_top { padding: 6px 20px 0; }
+.search_area .search_top a { font-size: 22px; height: 22px; line-height: 22px; width: 22px; }
+.search_area .search_top input[type="search"] { width: 87% }
+.login-form input.btn-default[type="button"], .login-form button.btn-default { font-size: 14px }
+#page-container-view { padding: 39px 0 100px; }
+.preview_image .cross { width: 50px; height: 50px }
+.preview_image .cross i { margin: 0px 0px 0px 5px; font-size: 28px; line-height: 42px; transform: rotate(135deg); }
+.tab_area .tabs > ul > li a { font-size: 14px; padding: 10px 0 }
+.tab_area .tabs > ul > li a.active { }
+.tab_area .tabs > ul > li:last-child a.active { }
+.tab_area { margin-top: 55px; }
+.tab_area_top {
+    margin-top: 45px;
+}
+.tab_area > .tab_section ul li a, .tab_area > .tab_section ul li a.active { font-size: 12px }
+.tab_area > .tab_section { padding: 10px 0; }
+.tab_area > .tab_section ul li { line-height: 22px }
+.tab_area > .tab_section ul li a.active { margin: -7px -1px; padding: 16px 0; }
+.tab_area > .tab_section input[type="reset"] { font-size: 12px; background: url("../images/reset-small.png") no-repeat 0 0; line-height: 13px; padding: 0 0 0 20px }
+.tab_area .tab_section .field_container > input[type="text"], .tab_area .tab_section .field_container .select_input_combo input[type="text"] { font-size: 12px; height: 24px; line-height: 24px; margin-top: 20px; padding: 0 10px; }
+.tab_area .tab_section .field_container .select_input_combo input[type="text"] { margin-top: 10px; }
+.tab_area .tab_section .field_container .select_row select { font-size: 12px; height: 24px; line-height: 24px; }
+.tab_area .tab_section .field_container .select_input_combo .col-xs-2 { font-size: 12px }
+.tab_area .tab_section .field_container .select_mandatory { border-left: 4px solid #354e6e !important; }
+.form_search a { font-size: 18px; line-height: 43px }
+.saved_searched_criteria .saved_searched_criteria_content ul li { padding: 5px 18px; }
+.saved_searched_criteria .saved_searched_criteria_content ul li span { font-size: 12px; }
+.saved_searched_criteria .saved_searched_criteria_content ul li a { font-size: 11px; line-height: 18px; margin-left: 3px }
+.saved_searched_criteria .saved_searched_criteria_header a { font-size: 12px; margin: 16px 20px }
+.saved_searched_criteria .saved_searched_criteria_header strong { font-size: 14px; line-height: 50px }
+.saved_searched_criteria .saved_searched_criteria_header img { width: 10% }
+.search-star { background-image: url("../images/search_icon_tab_small.png"); height: 21px; right: 30px; top: 4px; width: 23px; }
+.tab_area .tab_section .field_container > .select_row, .tab_area .tab_section .field_container .select_input_combo .select_row, .tab_area .tab_section .field_container .date_section .select_row { margin-top: 10px; padding-top: 0; padding-bottom: 0; margin-bottom: 10px }
+.tab_area .tab_section .field_container .select_row .caret { top: 8px; }
+.tab_area .tab_section .field_container .select_input_combo label { padding-left: 0; padding-right: 0 }
+.tab_area .tab_section .field_container .select_input_combo .select_row { width: 24% }
+.tab_area .tab_section .field_container .date_section label { font-size: 12px; line-height: 24px }
+.tab_area .tab_section .field_container .date_section input[type="radio"] { margin-top: 5px }
+.tab_area .tab_section .field_container .date_section img { top: 4px }
+.tab_area .tab_section .field_container .date_section input[type="text"] { padding-top: 0; padding-bottom: 0; font-size: 12px; height: 24px; line-height: 24px; }
+.tab_area .tab_section .field_container .date_section .select_row .caret { top: 8px }
+.tab_area .tab_section .field_container .date_section .select_row_bottom { margin-top: 0 }
+.tab_area .tab_section .field_container .date_section .month { width: 35% }
+.tab_area .tab_section .field_container .date_section > .select_row_bottom { width: 30% }
+.preview-delete-icon { background: url("../images/delete_icon_small.png"); width: 17px; height: 21px }
+.preview-edit-icon { background-image: url("../images/edit_icon_small.png"); height: 21px; width: 21px; margin-left: 10px; margin-right: 33px; }
+.preview_area .dropdown { top: -7px; }
+.swiper-container .tick { z-index: 1 }
+.preview_area footer { height: 53px }
+.preview_area footer ul { padding: 17px 0 0; }
+.preview_area footer ul li a.add { background: url("../images/footer_add_small.png") no-repeat 0 0; height: 37px; height: 20px }
+.preview_area footer ul li a.reset { background: url("../images/footer_refresh_small.png") no-repeat 0 0; width: 25px; height: 21px; }
+.preview_area footer ul li a.upload { background: url("../images/footer_uipload_small.png") no-repeat 0 0; width: 20px; height: 20px; }
+.search_criteria { margin-left: -112px; }
+.search_criteria p { font-size: 12px; background-size: 10%; padding: 10px 25px 10px 38px }
+.preview_edit .edit_container h4 { font-size: 14px; }
+.preview_edit .form_row label { font-size: 14px; line-height: 21px }
+.preview_edit .form_row input[type="text"] { font-size: 14px; height: 21px; line-height: 21px }
+.preview_edit .form_row a { font-size: 12px; line-height: 28px }
+.preview_edit .back_arrow { background: url("../images/preview_back_arrow_small.png") no-repeat 0 0; height: 15px; width: 11px; }
+.preview_edit .form_row select { font-size: 14px; height: 21px; line-height: 21px }
+.preview_edit .form_row textarea { font-size: 14px; height: 95px }
+.preview_edit .form_row { margin: 19px 0; }
+.preview_edit .button_area input[type="button"], .preview_edit .button_area input[type="reset"] { font-size: 14px; margin: 0 }
+.preview_edit .button_area a { font-size: 14px; margin: 0; padding: 8px 25px }
+.preview_edit .outer_form { padding-top: 0 }
+.last_modified { display: none }
+.pull-right { top: 31px; right: -135px }
+.pull-right-new{ right:10px}
+.header-view-inside .header-heading { padding-left: 65px }
+.header-view-inside .header-left a.back-icon { margin-top: 2px }
+}
+
+@media (max-width: 360px) {
+.swiper_login { max-width: 360px; }
+#modal-popup-view .modal-dialog { width: 296px }
+.edit-window .editfolder-input input { width: 70%; padding: 0 }
+/*.folder-list > li .pull-left .right_content_area { width: 86%; }
+.pull-right .swipe li a, .folder-list > li.inside_slide .pull-right .swipe li a { line-height: 70px; }*/
+    
+.saved_searched_criteria .saved_searched_criteria_header img { width: 13%; }
+.tab_area .tab_section .field_container .select_input_combo label span { float: right }
+.tab_area .tab_section .field_container .date_section .month { margin-left: 2px; }
+.tab_area .tab_section .field_container .date_section label { padding-left: 4px; padding-right: 4px }
+.tab_area .tab_section .field_container .date_section label[for="to"], .tab_area .tab_section .field_container .date_section label[for="toFolder"] { padding: 0 8px; }
+.tab_area .tab_section .field_container .date_section .col_from { width: 31%; }
+.upload_container ul li span { height: auto }
+.favorite_area .tab_area > .tab_section ul li { line-height: 15px }
+.favorite_area .pull-right .swipe-option { width: 32px; }
+.favorite_area .tab_area > .tab_section ul li a:first-child { padding: 0 15px; }
+.favorite_area .pull-right .swipe li a { font-size: 14px }
+}
+
+@media (max-width: 320px) {
+.logo { margin-top: 10px; }
+.login-container { width: 100%; }
+.search_area .search_top .search_right { width: 90% }
+.swiper_login { max-width: 320px; }
+.upload_container ul li span { height: auto }
+.saved_searched_criteria .saved_searched_criteria_header img { width: 15%; }
+.tab_area > .tab_section > ul > li > a:first-child { padding-left: 0; padding-right: 0 }
+.tab_area .tab_section .field_container .select_input_combo .select_row { padding-left: 2px; width: 23%; }
+.tab_area .tab_section .field_container .date_section .col_from { width: 30%; }
+.header-heading { width: 14em }
+}

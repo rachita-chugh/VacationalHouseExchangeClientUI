@@ -1,0 +1,226 @@
+	<div class="row" style="padding: 2%;">
+		<div class="col-md-12">
+			<h3 class="text-center text-primary">
+				Register With us !!!
+			</h3>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="col-md-12">
+			<div class="panel-group" id="panel-949589">
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-949589" data-target="#panel-element-494802">Personal Details</a>
+					</div>
+					<div id="panel-element-494802" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-12">
+									<form class="form-horizontal" role="form">
+									<div class="form-group">
+											 
+											<label for="fullName" class="col-sm-2 control-label formLabel">
+												Full Name:
+											</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control formValue mandatoryField" labelValue="Full Name"id="fullName">
+											</div>
+										</div>
+										<div class="form-group">
+											 
+											<label for="emailId" class="col-sm-2 control-label formLabel">
+												Email ID
+											</label>
+											<div class="col-sm-10">
+												<input type="email" onblur ="VHEFormValidation.validateEmailId(this)" class="form-control formValue mandatoryField" id="emailId" labelValue="Email Id">
+											</div>
+										</div>
+										<div class="form-group">
+											 
+											<label for="phoneNo" class="col-sm-2 control-label formLabel" >
+												Phone number
+											</label>
+											<div class="col-sm-10">
+												<input type="number" class="form-control formValue mandatoryField" labelValue = "Phone Number" onblur = "VHEFormValidation.maxLengthCheck(this)" id="phoneNo" maxlength="10">
+											</div>
+										</div>
+										<div class="form-group">
+											 
+											<label for="address" class="col-sm-2 control-label formLabel">
+												Address
+											</label>
+											<div class="col-sm-10">
+												<input type="textarea" labelValue="Address" class="form-control formValue mandatoryField" id="address">
+											</div>
+										</div>
+										<div class="form-group">
+											 
+											<label for="password" class="col-sm-2 control-label formLabel">
+												Password
+											</label>
+											<div class="col-sm-10">
+												<input type="password" labelValue="Password" class="form-control mandatoryField formValue" id="password">
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-949589" data-target="#panel-element-885755">House Details</a>
+					</div>
+					<div id="panel-element-885755" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-12">
+									<form class="form-horizontal" role="form">
+									
+										<div class="form-group">
+											 
+											<label for="city" class="col-sm-2 control-label formLabel">
+												City
+											</label>
+											<div class="col-sm-10">
+												<input type="text" labelValue="City" class="form-control formValue mandatoryField" id="city">
+											</div>
+										</div>
+										
+										<div class="form-group">
+											 
+											<label for="suburb" class="col-sm-2 control-label formLabel">
+												Suburb
+											</label>
+											<div class="col-sm-10">
+												<input type="text" labelValue="Suburb" class="form-control formValue mandatoryField" id="suburb">
+											</div>
+										</div>
+										<div class="form-group">
+											 
+											<label for="distanceCityCenter" class="col-sm-2 control-label formLabel">
+												Distance to city center
+											</label>
+											<div class="col-sm-10">
+												<input type="text" labelValue = "Distance to City Center"class="form-control formValue mandatoryField" id="distanceCityCenter">
+											</div>
+										</div>
+										<div class="form-group">
+											 
+											<label for="availabilityPublicTransport" class="col-sm-2 control-label formLabel">
+												Availability of public transport
+											</label>
+											<div class="col-sm-10">
+												<select id="availabilityPublicTransport" labelValue="Availability Of public transport" class="form-control formValue mandatoryField">
+												  <option disabled selected> --Select --</option>
+												  <option value="Yes">Yes</option>
+												  <option value="No">No</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="numberOfRooms" class="col-sm-2 control-label formLabel">
+												Number of rooms
+											</label>
+											<div class="col-sm-10">
+												<input type="tel" class="form-control formValue mandatoryField" labelValue="Number Of Rooms"id="numberOfRooms">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="airConditioning" class="col-sm-2 control-label formLabel">
+												Air-conditioning/heating facilities
+											</label>
+											<div class="col-sm-10">
+												<select id="airConditioning" labelValue="Air Condtioning/Heating facilities"class="form-control formValue mandatoryField">
+												  <option disabled selected> --Select --</option>
+												  <option value="Yes">Yes</option>
+												  <option value="No">No</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="swimmingPool" class="col-sm-2 control-label formLabel">
+												Swimming Pool
+											</label>
+											<div class="col-sm-10">
+												<select id="swimmingPool" labelValue="Swimming Pool" class="form-control formValue mandatoryField">
+												  <option disabled selected> --Select --</option>
+												  <option value="Yes">Yes</option>
+												  <option value="No">No</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="pointNeededWeek" class="col-sm-2 control-label formLabel">
+												Points needed for a week (Friday to Friday)
+											</label>
+											<div class="col-sm-10">
+												<input type="tel" labelValue="Points needed for a week" class="form-control formValue mandatoryField" id="pointNeededWeek">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="longStayDiscount" class="col-sm-2 control-label formLabel">
+												Discounts for long stays (over multiple weeks)
+											</label>
+											<div class="col-sm-10">
+												<input type="tel" labelValue="Discounts for long Stays" class="form-control formValue mandatoryField" id="longStayDiscount">
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						 <a class="panel-title collapsed" data-toggle="collapse" data-parent="#panel-949589" data-target="#paymentDetailsTab">Payment Details</a>
+					</div>
+					<div id="paymentDetailsTab" class="panel-collapse collapse">
+						<div class="panel-body">
+							<div class="row">
+								<div class="col-md-12">
+									<form class="form-horizontal" role="form">
+									
+										<div class="form-group">
+											 
+											<label for="cardDetails" class="col-sm-2 control-label formLabel">
+												Card Number
+											</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control formValue" id="cardDetails">
+											</div>
+										</div>
+										
+										<div class="form-group">
+											 
+											<label for="amount" class="col-sm-2 control-label formLabel">
+												Amount
+											</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control formValue" id="amount" value = "$1000"readonly>
+											</div>
+										</div>
+		
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8">
+		</div>
+		<div class="col-md-4">
+			 
+			<button  class="btn btn-primary btn-block" ng-click="register()">
+				Register
+			</button>
+		</div>
+	</div>

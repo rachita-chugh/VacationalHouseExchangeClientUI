@@ -1,0 +1,66 @@
+{
+  "ecmaVersion": 5,
+  "plugins": {
+    "guess-types": {
+      
+    },
+    "outline": {
+      
+    },
+    "chrome-apps": {
+      
+    },
+    "chrome-extension": {
+      
+    },
+    "gas": {
+      
+    },
+    "node": {
+      
+    },
+    "lint": {
+      
+    },
+    "requirejs": {
+      
+    },
+    "angular1": {
+      
+    },
+    "browser-extension": {
+      
+    },
+    "cordovajs": {
+      
+    },
+    "gmaps3.frozen": {
+      
+    },
+    "gcharts": {
+      
+    },
+    "node-extension": {
+      
+    },
+    "bootstrap": {
+      
+    },
+    "jquery-ui1-12": {
+      
+    },
+    "requirejs-extension": {
+      
+    },
+    "jquery-extension": {
+      
+    },
+    "jquery-mobile1.5": {
+      
+    }
+  },
+  "libs": [
+    "browser",
+    "jquery"
+  ]
+}
