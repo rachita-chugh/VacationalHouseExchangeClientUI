@@ -31,7 +31,13 @@ vacationHouseExchangeApp.config(function ($routeProvider) {
 										{
 											templateUrl: 'partials/registration_page.html',
 											controller: 'registrationPageController'
-									}).when('/viewHouses',
+									}).when('/viewHousesNonMember',
+											{
+										templateUrl: 'partials/viewHousesNonMember.html',
+										controller: 'viewHousesNonMemberController',
+
+											})
+									.when('/viewHouses',
 										{
 											templateUrl: 'partials/viewHouses.html',
 											controller: 'viewHousesController'
