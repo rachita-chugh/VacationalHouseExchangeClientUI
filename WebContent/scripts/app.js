@@ -43,7 +43,11 @@ vacationHouseExchangeApp.config(function ($routeProvider) {
 										{
 											templateUrl: 'partials/editDetails.html',
 											controller: 'editDetailsController'
-									}).otherwise({
+									}).when('/reviewandrating',
+											{
+										templateUrl: 'partials/reviewandrating.html',
+										controller: 'reviewandratingController'
+								}).otherwise({
 										redirectTo: 'home.html'
 										});
 
