@@ -1,8 +1,8 @@
 'use strict';
 
-//var VHEServer="http://172.20.10.6:8081/VacationalHouseExchange/vhe/";
+var VHEServer="http://172.20.10.6:8082/VacationalHouseExchange/vhe/";
 //var VHEServer = "http://vacationalhouseexchangewsenv.9nsft9whya.ap-southeast-2.elasticbeanstalk.com/vhe/";
-var VHEServer = "http://localhost:8082/VacationalHouseExchange/vhe/";
+//var VHEServer = "http://localhost:8082/VacationalHouseExchange/vhe/";
 var loggedInUser="";
 
 var vacationHouseExchangeApp = angular.module("vacationHouseExchangeApp", ['ngRoute']);
@@ -31,13 +31,7 @@ vacationHouseExchangeApp.config(function ($routeProvider) {
 										{
 											templateUrl: 'partials/registration_page.html',
 											controller: 'registrationPageController'
-									}).when('/viewHousesNonMember',
-											{
-										templateUrl: 'partials/viewHousesNonMember.html',
-										controller: 'viewHousesNonMemberController',
-
-											})
-									.when('/viewHouses',
+									}).when('/viewHouses',
 										{
 											templateUrl: 'partials/viewHouses.html',
 											controller: 'viewHousesController'

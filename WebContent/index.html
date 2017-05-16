@@ -42,8 +42,10 @@
 <link rel="stylesheet" href="css/fonts/font-awesome.min.css">
 <link rel="stylesheet" href="css/fonts/fontawesome-webfont.woff2">
 <link rel="stylesheet" href="css/fonts/glyphicons-halflings-regular.ttf">
-<link rel="stylesheet" href="css/fonts/glyphicons-halflings-regular.woff2">
-<link rel="stylesheet" href="css/fonts/glyphicons-halflings-regular.woff">
+<link rel="stylesheet"
+	href="css/fonts/glyphicons-halflings-regular.woff2">
+<link rel="stylesheet"
+	href="css/fonts/glyphicons-halflings-regular.woff">
 <link rel="stylesheet" href="css/jQuery/jquery-ui.theme.min.css">
 <link rel="stylesheet" href="css/jQuery/jquery-ui.css">
 <link rel="stylesheet" href="css/generic/swiper.min.css">
@@ -73,18 +75,23 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="top-navbar-1">
 				<ul class="nav navbar-nav">
-					<li class = "menuClass" id="home"><a><span
+					<li class="menuClass" id="home"><a><span
 							aria-hidden="true" class="icon_house"></span><br>Home</a></li>
-					<li class = "menuClass" id="login"><a><span aria-hidden="true"
-							class="icon_camera"></span><br>Login</a></li>
-					<li class = "menuClass" id="register"><a><span aria-hidden="true"
-							class="icon_comment"></span><br>Register</a></li>
-					<li class = "menuClass" id="viewHouses"><a><span aria-hidden="true"
-							class="icon_tools"></span><br>View Houses</a></li>
-					<li class = "menuClass" id="home2"><a><span aria-hidden="true"
-							class="icon_profile"></span><br>Account</a></li>
-					<li class = "menuClass" id="logout" style="display: none;"><a><span aria-hidden="true"
-							class="icon_mail"></span><br>Logout</a></li>
+					<li class="menuClass" id="login"><a><span
+							aria-hidden="true" class="icon_camera"></span><br>Login</a></li>
+					<li class="menuClass" id="register"><a><span
+							aria-hidden="true" class="icon_comment"></span><br>Register</a></li>
+					<li class="menuClass" id="viewHouses"><a><span
+							aria-hidden="true" class="icon_tools"></span><br>View Houses</a></li>
+					<li class="menuClass dropdown" ><a
+						class="dropdown-toggle" data-toggle="dropdown"><span
+							aria-hidden="true" class="icon_profile"></span><br>Account</a>
+						<ul class="dropdown-menu">
+							<li><a ng-click="editProfile()">Edit Profile</a></li>
+							<!-- <li class="divider"></li> -->
+						</ul></li>
+					<li class="menuClass" id="logout" style="display: none;"><a><span
+							aria-hidden="true" class="icon_mail"></span><br>Logout</a></li>
 				</ul>
 			</div>
 		</div>
