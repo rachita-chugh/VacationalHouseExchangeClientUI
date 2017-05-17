@@ -32,7 +32,7 @@ var dataForRequest={};
 		if(errorFlag == false){
 			console.log("Form data for request:"+ dataForRequest);
 		
-			/*vacationHouseExchangeAppService.callVHEServer("userendpoints/register",dataForRequest, function(result){
+			vacationHouseExchangeAppService.callVHEServer("userendpoints/register",dataForRequest, function(result){
 				//bootbox.alert("You are successfully registered!");
 				if(result['statusCode'] == 0){
 					$location.path("viewHouses");
@@ -43,7 +43,7 @@ var dataForRequest={};
 
 				},function(error){
 					bootbox.alert("Could not connect to server!");
-				});*/
+				});
 		}
 		
 	}
