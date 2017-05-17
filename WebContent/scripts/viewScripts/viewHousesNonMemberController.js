@@ -7,12 +7,11 @@ vacationHouseExchangeApp.controller('viewHousesNonMemberController', ['$scope','
 				vacationHouseExchangeAppService.callVHEServer("viewHouseEndPoints/viewHouse","", function(result){
 					$rootScope.$apply(function() {
 						$scope.repeatData = result['house_key'];
-				      });		
-					
-							
+				      });									
 					},function(error){
 					bootbox.alert("Could not connect to server!");
 				});
 			}				
 		$scope.fetchHouseList();
+			
 }]);

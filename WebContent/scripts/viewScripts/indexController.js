@@ -24,7 +24,10 @@ vacationHouseExchangeApp.controller('indexController', ['$scope','$rootScope', '
 		$rootScope.$apply(function() {
 			$('.menuClass').removeClass('active');
 			$('#viewHouses').addClass('active');
-			$location.path("viewHouses");
+			if(loggedInUser == "")
+				$location.path("viewHousesNM");
+			else
+				$location.path("viewHouses");
 		});
 	});
 
@@ -33,17 +36,37 @@ vacationHouseExchangeApp.controller('indexController', ['$scope','$rootScope', '
 			$location.path("editDetails");
 		
 	}
+	
+	$('#account').click(function(){
+		$rootScope.$apply(function() {
+			$('.menuClass').removeClass('active');
+			$('#account').addClass('active');
+			$location.path("editDetails");
+		});
+	});
 
+	$('#acceptBookingHouses').click(function(){
+		$rootScope.$apply(function() {
+			$('.menuClass').removeClass('active');
+			$('#acceptBookingHouses').addClass('active');
+			$location.path("bookingaccept");
+		});
+	});
+	
+	
 	$('#logout').click(function(){
 		var data={
 				"emailId": loggedInUser	
 		}
-		vacationHouseExchangeAppService.callVHEServer("userendpoints/login",data, function(result){
+		vacationHouseExchangeAppService.callVHEServer("userendpoints/logout",data, function(result){
 			if(result['statusCode'] == 0){
+				loggedInUser = "";
 				$('.menuClass').removeClass('active');
 				$('#home').addClass('active');
 				$('#logout').css('display', 'none');
+				$('#account').css('display', 'none');
 				$('#register').css('display', 'block');
+				$('#acceptBookingHouses').css('display', 'none');
 				$('#login').css('display', 'block');
 				$location.path("home");
 				$scope.$apply();

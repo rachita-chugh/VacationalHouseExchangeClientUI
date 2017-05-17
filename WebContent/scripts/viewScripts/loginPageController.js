@@ -73,8 +73,11 @@ vacationHouseExchangeApp.controller('loginPageController', ['$scope','$rootScope
 				$('.menuClass').removeClass('active');
 				$('#viewHouses').addClass('active');
 				$('#logout').css('display', 'block');
+				$('#account').css('display', 'block');
+				$('#acceptBookingHouses').css('display', 'block');
 				$('#register').css('display', 'none');
 				$('#login').css('display', 'none');
+				
 				//success=true;
 				$location.path("viewHouses");
 				$scope.$apply();

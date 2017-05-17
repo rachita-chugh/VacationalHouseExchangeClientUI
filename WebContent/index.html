@@ -37,6 +37,7 @@
 <script src="scripts/viewScripts/homeController.js"></script>
 <script src="scripts/viewScripts/reviewandratingController.js"></script>
 <script src="scripts/viewScripts/bookingacceptController.js"></script>
+<script src="scripts/viewScripts/viewHousesNonMemberController.js"></script>
 
 <!--css-->
 <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
@@ -85,13 +86,20 @@
 							aria-hidden="true" class="icon_comment"></span><br>Register</a></li>
 					<li class="menuClass" id="viewHouses"><a><span
 							aria-hidden="true" class="icon_tools"></span><br>View Houses</a></li>
-					<li class="menuClass dropdown" ><a
-						class="dropdown-toggle" data-toggle="dropdown"><span
-							aria-hidden="true" class="icon_profile"></span><br>Account</a>
+					<li class="menuClass" id="account" style="display: none;"><a><span
+							aria-hidden="true" class="icon_tools"></span><br>Edit
+							Profile</a></li>
+					<li class="menuClass" id="acceptBookingHouses" style="display: none;"><a><span
+							aria-hidden="true" class="icon_tools"></span><br>Booking Requests</a></li>
+					<!-- <li class="menuClass dropdown" id="account"
+						style="display: none;><a
+						class="
+						dropdown-toggle" data-toggle="dropdown"><span
+						aria-hidden="true" class="icon_profile"></span><br>Account</a>
 						<ul class="dropdown-menu">
 							<li><a ng-click="editProfile()">Edit Profile</a></li>
-							<!-- <li class="divider"></li> -->
-						</ul></li>
+							<li class="divider"></li>
+						</ul></li> -->
 					<li class="menuClass" id="logout" style="display: none;"><a><span
 							aria-hidden="true" class="icon_mail"></span><br>Logout</a></li>
 				</ul>
@@ -105,58 +113,6 @@
 	<footer>
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-4 footer-box wow fadeInUp">
-					<h4>About Us</h4>
-					<div class="footer-box-text">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-							sed do eiusmod tempor incididunt ut labore et. Lorem ipsum dolor
-							sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-							incididunt ut labore et.</p>
-						<p>
-							<a href="about.html">Read more...</a>
-						</p>
-					</div>
-				</div>
-				<div class="col-sm-4 footer-box wow fadeInDown">
-					<h4>Email Updates</h4>
-					<div class="footer-box-text footer-box-text-subscribe">
-						<p>Enter your email and you'll be one of the first to get new
-							updates:</p>
-						<form role="form" action="assets/subscribe.php" method="post">
-							<div class="form-group">
-								<label class="sr-only" for="subscribe-email">Email
-									address</label> <input type="text" name="email" placeholder="Email..."
-									class="subscribe-email form-control" id="subscribe-email">
-							</div>
-							<button type="submit" class="btn">Subscribe</button>
-						</form>
-						<p class="success-message"></p>
-						<p class="error-message"></p>
-					</div>
-				</div>
-				<div class="col-sm-4 footer-box wow fadeInDown">
-					<h4>Contact Us</h4>
-					<div class="footer-box-text footer-box-text-contact">
-						<p>
-							<span aria-hidden="true" class="icon_pin"></span> Address: Via
-							Principe Amedeo 9, 10100, Torino, TO, Italy
-						</p>
-						<p>
-							<span aria-hidden="true" class="icon_phone"></span> Phone: 0039
-							333 12 68 347
-						</p>
-						<p>
-							<span aria-hidden="true" class="icon_profile"></span> Skype:
-							Gioia_Business
-						</p>
-						<p>
-							<span aria-hidden="true" class="icon_mail"></span> Email: <a
-								href="#">contact@gioia.com</a>
-						</p>
-					</div>
-				</div>
-			</div>
-			<div class="row">
 				<div class="col-sm-12 wow fadeIn">
 					<div class="footer-border"></div>
 				</div>
@@ -164,15 +120,8 @@
 			<div class="row">
 				<div class="col-sm-7 footer-copyright wow fadeIn">
 					<p>
-						&copy; Gioia - All rights reserved. Template by <a
-							href="http://azmind.com">Azmind</a>.
+						&copy; SPARK
 					</p>
-				</div>
-				<div class="col-sm-5 footer-social wow fadeIn">
-					<a href="#"><span class="social_facebook"></span></a> <a href="#"><span
-						class="social_dribbble"></span></a> <a href="#"><span
-						class="social_twitter"></span></a> <a href="#"><span
-						class="social_pinterest"></span></a>
 				</div>
 			</div>
 		</div>
@@ -180,7 +129,7 @@
 </body>
 
 <script>
-
+	
 </script>
 
 </html>
