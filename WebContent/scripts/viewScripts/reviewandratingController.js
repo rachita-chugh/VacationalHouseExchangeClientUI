@@ -1,6 +1,20 @@
 vacationHouseExchangeApp.controller('reviewandratingController', ['$scope','$rootScope', '$location', '$window', 'vacationHouseExchangeAppService', function ($scope,$rootScope, $location, $window, vacationHouseExchangeAppService ) {
-
-
+	$scope.repeatData=[];
+	$scope.responseData;
+	$scope.viewReviewRating = function(){
+		
+		var data={
+				"emailId":loggedInUser
+		}
+		
+		vacationHouseExchangeAppService.callVHEServer("reviewnandrating/viewRatingsAndReviews",data, function(result){
+			responseData = result['averageRating'];
+			repeatData =  result['house_key'];
+			},function(error){
+				bootbox.alert("Could not connect to server!");
+			});
+	}
+	$scope.viewReviewRating();
 	$scope.reviewandratingform=function(){
 		//	$location.path("viewHouses");
 			var success=false;

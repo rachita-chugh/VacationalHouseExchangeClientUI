@@ -1,18 +1,36 @@
 <div class="reviewandratingform">
-		<form id="reviewandratingform" class="text-left">
-			<div class="reviewandratingform-message"></div>
-			<div class="main-reviewandratingform">
-				<div class="reviewandratingform-group">
-					<div class="form-group">
-						<label for="review" class="sr-only formId">Review</label>
-						<input type="text" class="form-control formValue" id="review" placeholder="Review" name="review">
+	<form id="reviewandratingform" class="text-left">
+		<div class="reviewandratingform-message">
+			<div class="row"
+				style="border: 2px solid gainsboro; margin-top: 2%; border-radius: 17px;"
+				ng-repeat="data in repeatData">
+				
+				<div class="col-md-12">
+					<p>Average Rating : {{responseData}}</p>
+					<div ng-repeat = "data in repeatData">
+					<p>{{data.ratings}}</p><br>
+					<p>{{data.review}}</p>
 					</div>
-					<div class="form-group">
-						<label for="rating" class="sr-only formId">Rating</label>
-						<input type="text" class="form-control formValue" id="rating" placeholder="Rating" name="rating">
-						</div>
+					
 				</div>
-				<button class="reviewandrating-button" ng-click="reviewandratingform()">Submit</button>
+				
 			</div>
-		</form>
+		</div>
+		<div class="main-reviewandratingform">
+			<div class="reviewandratingform-group">
+				<div class="form-group">
+					<label for="review" class="sr-only formId">Review</label> <input
+						type="text" class="form-control formValue" id="review"
+						placeholder="Review" name="review">
+				</div>
+				<div class="form-group">
+					<label for="rating" class="sr-only formId">Rating</label> <input
+						type="text" class="form-control formValue" id="rating"
+						placeholder="Rating" name="rating">
+				</div>
+			</div>
+			<button class="reviewandrating-button"
+				ng-click="reviewandratingform()">Submit</button>
+		</div>
+	</form>
 </div>
