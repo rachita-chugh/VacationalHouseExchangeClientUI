@@ -1,10 +1,11 @@
-vacationHouseExchangeApp.controller('reviewandratingController', ['$scope','$rootScope', '$location', '$window', 'vacationHouseExchangeAppService', function ($scope,$rootScope, $stateParams, $location, $window, vacationHouseExchangeAppService ) {
+/*vacationHouseExchangeApp.controller('reviewandratingController', ['$scope','$rootScope', '$location', '$window', 'vacationHouseExchangeAppService', function ($scope,$rootScope, $stateParams, $location, $window, vacationHouseExchangeAppService ) {*/
+vacationHouseExchangeApp.controller('reviewandratingController', ['$scope','$rootScope', '$location', '$window', 'vacationHouseExchangeAppService', function ($scope,$rootScope, $location, $window, vacationHouseExchangeAppService ) {
 	$scope.repeatData=[];
 	$scope.responseData = null;
 	var data = null;
 	console.log("review for: "+$rootScope.reviewEmail);
 	$scope.viewReviewRating = function(){
-		var requestdata={
+		var requestdata= {
 				"emailId":$rootScope.reviewEmail
 		}
 		
@@ -17,7 +18,7 @@ vacationHouseExchangeApp.controller('reviewandratingController', ['$scope','$roo
 			},function(error){
 				bootbox.alert("Could not connect to server!");
 			});
-	}
+	};
 	$scope.viewReviewRating();
 	$scope.reviewandratingform=function(){
 		//	$location.path("viewHouses");
