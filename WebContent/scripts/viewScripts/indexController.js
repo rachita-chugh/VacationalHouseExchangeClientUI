@@ -53,6 +53,14 @@ vacationHouseExchangeApp.controller('indexController', ['$scope','$rootScope', '
 		});
 	});
 	
+	$('#letHouse').click(function(){
+		$rootScope.$apply(function() {
+			$('.menuClass').removeClass('active');
+			$('#letHouse').addClass('active');
+			$location.path("lettingTheHouse");
+		});
+	});
+	
 	
 	$('#logout').click(function(){
 		var data={

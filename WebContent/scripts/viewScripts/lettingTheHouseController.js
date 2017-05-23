@@ -11,7 +11,11 @@ var dataForRequest={};
 		
 		vacationHouseExchangeAppService.callVHEServer("lettinghouseendpoints/lettingHouse",dataForRequest, function(result){
 			if(result['statusCode'] == 0){
-				$location.path("viewHouses");
+				$rootScope.$apply(function() {
+					$location.path("viewHouses");
+				});								
+				
+				
 			}else{
 				bootbox.alert(result['error_message']);
 			}

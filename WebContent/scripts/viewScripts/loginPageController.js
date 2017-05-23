@@ -75,6 +75,7 @@ vacationHouseExchangeApp.controller('loginPageController', ['$scope','$rootScope
 				$('#logout').css('display', 'block');
 				$('#account').css('display', 'block');
 				$('#acceptBookingHouses').css('display', 'block');
+				$('#letHouse').css('display', 'block');
 				$('#register').css('display', 'none');
 				$('#login').css('display', 'none');
 				
