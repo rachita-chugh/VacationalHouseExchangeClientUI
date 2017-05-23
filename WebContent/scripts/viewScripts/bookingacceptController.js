@@ -5,13 +5,11 @@ vacationHouseExchangeApp.controller('bookingacceptController', ['$scope','$rootS
 	}
 	vacationHouseExchangeAppService.callVHEServer("bookHouseEndPoints/viewHouseRequest",data, function(result){
 		if(result['statusCode'] == 0){
-			/*if(result['username'] == 'not found'){
-				$("#username").val('No request has been made');
-			}
-			else{*/
+			
 				$('#arbutton').css('display', 'block');
+				$('#arbutton1').css('display', 'block');
 				$("#username").text('Requested By :' + result['requesterEmailId']);
-			//}
+			
 		}else if(result['statusCode'] == 2){
 			$("#username").text('No request has been made');
 		}else{
@@ -24,9 +22,10 @@ vacationHouseExchangeApp.controller('bookingacceptController', ['$scope','$rootS
 	$scope.accept=function(){
 			vacationHouseExchangeAppService.callVHEServer("bookHouseEndPoints/acceptHouseRequest",data, function(result){
 				if(result['statusCode'] == 0){
-					bootbox.alert("Accepted Successfully")
+					bootbox.alert("Accepted Successfully");
+					$location.path("viewHouses");
 				}else{
-					bootbox.alert("There was some error. Please try again!")
+					bootbox.alert("There was some error. Please try again!");
 				}
 				},function(error){
 					bootbox.alert("Could not connect to server!");
@@ -36,9 +35,10 @@ vacationHouseExchangeApp.controller('bookingacceptController', ['$scope','$rootS
 		
 		
 		$scope.reject=function(){
-			vacationHouseExchangeAppService.callVHEServer("reviewnandrating/rejectBookRequest",data, function(result){
+			vacationHouseExchangeAppService.callVHEServer("bookHouseEndPoints/rejectBookRequest",data, function(result){
 				if(result['statusCode'] == 0){
-					bootbox.alert("Rejected Successfully")
+					bootbox.alert("Rejected Successfully");
+					$location.path("viewHouses");
 				}else{
 					bootbox.alert("There was some error. Please try again!")
 				}

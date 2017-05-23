@@ -4,14 +4,8 @@ vacationHouseExchangeApp.controller('reviewandratingController', ['$scope','$roo
 	var data = null;
 	console.log("review for: "+$rootScope.reviewEmail);
 	$scope.viewReviewRating = function(){
-		
-<<<<<<< HEAD
-		var data={
-				"emailId": $stateParams.ViewReviewOfUser
-=======
 		var requestdata={
 				"emailId":$rootScope.reviewEmail
->>>>>>> 87c5aca4fc39d35cbaa595e18f4a071fa95698eb
 		}
 		
 		vacationHouseExchangeAppService.callVHEServer("reviewnandrating/viewRatingsAndReviews",requestdata, function(result){
@@ -40,11 +34,7 @@ vacationHouseExchangeApp.controller('reviewandratingController', ['$scope','$roo
 			var requestdata={
 					"review": $("#review").val(),
 					"rating" : $("#rating").val(),
-<<<<<<< HEAD
-					"emailId":$stateParams.ViewReviewOfUser
-=======
 					"emailId":$rootScope.reviewEmail
->>>>>>> 87c5aca4fc39d35cbaa595e18f4a071fa95698eb
 			}		
 			
 			vacationHouseExchangeAppService.callVHEServer("reviewnandrating/addreviewnandrating",requestdata, function(result){
