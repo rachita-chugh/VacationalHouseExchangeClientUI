@@ -1,20 +1,14 @@
 <div class="reviewandratingform">
 	<form id="reviewandratingform" class="text-left">
 		<div class="reviewandratingform-message">
-			<div class="row"
-				style="border: 2px solid gainsboro; margin-top: 2%; border-radius: 17px;"
-				ng-repeat="data in repeatData">
-				
-				<div class="col-md-12">
-					<p>Average Rating : {{responseData}}</p>
-					<div ng-repeat = "data in repeatData">
-					<p>{{data.ratings}}</p><br>
-					<p>{{data.review}}</p>
-					</div>
-					
+		<div class="col-md-12">
+		<p>Average Rating : {{responseData}}</p> 
+			<div class="row" style="border: 2px solid gainsboro; margin-top: 2%; border-radius: 17px;margin-bottom: 36px;" ng-repeat = "data in repeatData" > 
+					<p>Rating: {{data.ratings}}</p><br>
+					<p>Review: {{data.review}}</p>
 				</div>
 				
-			</div>
+			 </div>
 		</div>
 		<div class="main-reviewandratingform">
 			<div class="reviewandratingform-group">

@@ -1,15 +1,20 @@
 vacationHouseExchangeApp.controller('reviewandratingController', ['$scope','$rootScope', '$location', '$window', 'vacationHouseExchangeAppService', function ($scope,$rootScope, $location, $window, vacationHouseExchangeAppService ) {
 	$scope.repeatData=[];
-	$scope.responseData;
+	$scope.responseData = null;
+	var data = null;
+	console.log("review for: "+$rootScope.reviewEmail);
 	$scope.viewReviewRating = function(){
 		
-		var data={
-				"emailId":loggedInUser
+		var requestdata={
+				"emailId":$rootScope.reviewEmail
 		}
 		
-		vacationHouseExchangeAppService.callVHEServer("reviewnandrating/viewRatingsAndReviews",data, function(result){
-			responseData = result['averageRating'];
-			repeatData =  result['house_key'];
+		vacationHouseExchangeAppService.callVHEServer("reviewnandrating/viewRatingsAndReviews",requestdata, function(result){
+			$rootScope.$apply(function() {
+				$scope.responseData = result['averageRating'];
+				$scope.repeatData =  result['house_key'];
+			});	
+			
 			},function(error){
 				bootbox.alert("Could not connect to server!");
 			});
@@ -27,13 +32,13 @@ vacationHouseExchangeApp.controller('reviewandratingController', ['$scope','$roo
 				return;
 			}
 			
-			var data={
+			var requestdata={
 					"review": $("#review").val(),
 					"rating" : $("#rating").val(),
-					"emailId":loggedInUser
+					"emailId":$rootScope.reviewEmail
 			}		
 			
-			vacationHouseExchangeAppService.callVHEServer("reviewnandrating/addreviewnandrating",data, function(result){
+			vacationHouseExchangeAppService.callVHEServer("reviewnandrating/addreviewnandrating",requestdata, function(result){
 				if(result['statusCode'] == 0){
 					bootbox.alert("Review and Rating added successfully.")
 				}else{
