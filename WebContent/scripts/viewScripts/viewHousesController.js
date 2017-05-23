@@ -26,9 +26,18 @@ vacationHouseExchangeApp.controller('viewHousesController', ['$scope','$rootScop
 
 
 	$scope.viewreview=function($event, data){
+<<<<<<< HEAD
 		$location.path("reviewandrating");
 		$state.go("State", {ViewReviewOfUser : data.emailId});
 		$scope.$apply();
+=======
+		
+			$rootScope.reviewEmail = data.emailId;
+			$location.path("reviewandrating");
+		 
+		
+		//$scope.$apply();
+>>>>>>> 87c5aca4fc39d35cbaa595e18f4a071fa95698eb
 	};		
 	$scope.bookHouse=function($event, data){
 
