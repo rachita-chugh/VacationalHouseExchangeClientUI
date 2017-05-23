@@ -5,13 +5,15 @@ vacationHouseExchangeApp.controller('bookingacceptController', ['$scope','$rootS
 	}
 	vacationHouseExchangeAppService.callVHEServer("bookHouseEndPoints/viewHouseRequest",data, function(result){
 		if(result['statusCode'] == 0){
-			if(result['username'] == 'not found'){
+			/*if(result['username'] == 'not found'){
 				$("#username").val('No request has been made');
 			}
-			else{
+			else{*/
 				$('#arbutton').css('display', 'block');
-				$("#username").val('Requested By :' + result['username']);
-			}
+				$("#username").text('Requested By :' + result['requesterEmailId']);
+			//}
+		}else if(result['statusCode'] == 2){
+			$("#username").text('No request has been made');
 		}else{
 			bootbox.alert("There was some error. Please try again!")
 		}
@@ -34,7 +36,7 @@ vacationHouseExchangeApp.controller('bookingacceptController', ['$scope','$rootS
 		
 		
 		$scope.reject=function(){
-			vacationHouseExchangeAppService.callVHEServer("reviewnandrating/addreviewnandrating",data, function(result){
+			vacationHouseExchangeAppService.callVHEServer("reviewnandrating/rejectBookRequest",data, function(result){
 				if(result['statusCode'] == 0){
 					bootbox.alert("Rejected Successfully")
 				}else{

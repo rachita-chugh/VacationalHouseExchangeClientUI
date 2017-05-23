@@ -34,9 +34,13 @@ var dataForRequest={};
 		
 			vacationHouseExchangeAppService.callVHEServer("userendpoints/register",dataForRequest, function(result){
 				//bootbox.alert("You are successfully registered!");
+						
 				if(result['statusCode'] == 0){
-					$location.path("viewHouses");
-					$scope.apply();
+					$rootScope.$apply(function() {
+						$location.path("viewHouses");
+					});
+					
+					//$scope.apply();
 				}else{
 					bootbox.alert("Problem Occurred while registering!");
 				}
