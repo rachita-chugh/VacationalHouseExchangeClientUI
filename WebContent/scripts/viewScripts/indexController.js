@@ -75,6 +75,7 @@ vacationHouseExchangeApp.controller('indexController', ['$scope','$rootScope', '
 				$('#account').css('display', 'none');
 				$('#register').css('display', 'block');
 				$('#acceptBookingHouses').css('display', 'none');
+				$('#letHouse').css('display', 'none');
 				$('#login').css('display', 'block');
 				$location.path("home");
 				$scope.$apply();
