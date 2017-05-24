@@ -14,7 +14,7 @@ vacationHouseExchangeApp.controller('loginPageController', ['$scope','$rootScope
 			var data={
 				"emailId": result	
 			}
-			vacationHouseExchangeAppService.callVHEServer("userendpoints/forgotPassword",data, function(result){
+			vacationHouseExchangeAppService.callVHEServer("userendpoints/forgetPassoword",data, function(result){
 				if(result['statusCode'] == 0){
 					bootbox.alert(result['RESPONSE_STATUS']);
 					
